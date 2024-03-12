@@ -52,7 +52,7 @@ img {
 }
 
 .header {
-
+box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation {
@@ -160,7 +160,8 @@ font-family: "Raleway", sans-serif;
         url(../images/hero-wrap.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
+    max-width: 1440px;
 }
 
 .hero-title {
@@ -191,6 +192,7 @@ font-family: "Raleway", sans-serif;
     margin-top: 48px;
     border: none;
     border-radius: 4px;
+    transition: baclround-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover, .hero-button:focus {
     background-color: #404BBF;
@@ -311,6 +313,7 @@ font-family: "Raleway", sans-serif;
 .team-contact-list {
     display: flex;
     gap: 24px;
+    justify-content: center
 }
 
 .team-contact-list-item {}
@@ -323,6 +326,14 @@ font-family: "Raleway", sans-serif;
     display: block;
     width: 40px;
     height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-contact-link:focus, .team-contact-link:hover {
+    background-color: #404BBF;
 }
 
 .team-cotact-icon {
@@ -391,12 +402,16 @@ font-family: "Raleway", sans-serif;
     letter-spacing: 0.02em;
 }
 
-.cashless-animation {
+.animation {
     position: relative;
     overflow: hidden;
 }
 
 .overlay{
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
     position: absolute;
     padding-left: 32px;
     padding-right: 32px;
@@ -412,13 +427,6 @@ font-family: "Raleway", sans-serif;
 
 .portfolio-list-item:hover .overlay {
     transform: translateY(0);
-}
-
-.overlay p {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
 }
 
 
@@ -437,6 +445,7 @@ font-family: "Raleway", sans-serif;
 
 .footer-wrap {
     display: flex;
+    align-items: baseline;
     
 }
 
@@ -496,6 +505,9 @@ footer .logo {
     width: 40px;
     height: 40px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-contact-link:hover, .footer-contact-link:focus {
